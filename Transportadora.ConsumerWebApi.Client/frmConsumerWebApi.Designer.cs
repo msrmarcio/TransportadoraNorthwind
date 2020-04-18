@@ -84,6 +84,8 @@
             this.Controls.Add(this.dgvTransportadoras);
             this.Name = "frmConsumerWebApi";
             this.Text = "Transportadoras Consumer Web Api 2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConsumerWebApi_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmConsumerWebApi_FormClosed);
             this.Load += new System.EventHandler(this.frmConsumerWebApi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransportadoras)).EndInit();
             this.ResumeLayout(false);

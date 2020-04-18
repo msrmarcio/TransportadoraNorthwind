@@ -184,6 +184,19 @@ namespace Transportadora.ConsumerWebApi.Client
                 }
             }
         }
+
+        private void frmConsumerWebApi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?", "Transportadora NorthWind - AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void frmConsumerWebApi_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 
